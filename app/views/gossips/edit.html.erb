@@ -1,0 +1,8 @@
+<h1>Modifier un gossip </h1><br>
+
+<%= form_for @gossip do |f| %>
+    titre : <%= f.text_field :title %><br />
+    Contenu : <%= f.text_field :content %><br />
+    <%= f.submit %>
+  <% end %>
+  

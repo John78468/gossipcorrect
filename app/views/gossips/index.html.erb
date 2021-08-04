@@ -1,0 +1,22 @@
+
+
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col"> Id </th>
+      <th scope="col">Titre</th>
+      <th scope="col">Lien vers le contenu du Gossip</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @gossips.each do |gossip| %>
+    <tr>
+      <th scope="row"><%= gossip.id %></th>
+      <td> <%= gossip.title %> </td>
+      <td> <%= link_to 'voir le contenu', gossip_path(gossip.id) %> </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+  <%=link_to "creer un potins", new_gossip_path %>

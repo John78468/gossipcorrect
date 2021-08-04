@@ -1,0 +1,9 @@
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%=@gossip.title%></h5>
+    <p class="card-text"><%=@gossip.content%></p>
+    <%=link_to "modifier",edit_gossip_path(@gossip.id)%>
+    <%=link_to "supprimer", gossip_path(@gossip.id), method: :delete, data: { confirm: "etes vous sur?" } %>
+
+  </div>
+</div>
